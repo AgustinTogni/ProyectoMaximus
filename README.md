@@ -1,4 +1,5 @@
 ⛔En Proceso⛔ 
+
 Este proyecto aún está en desarrollo, por lo cual se podrá ver como faltan aún cosas por terminar, así como otras en estado incompleto. Cuando dicho proyecto esté terminado será especificado.
 
 Tener en cuenta que este trabajo está realizado de manera 100% propia, aplicado sobre una página a la cual no tengo más acceso que el que dispone un usuario normal, esto obviamente limitando algunas opciones, herramientas y o información.
