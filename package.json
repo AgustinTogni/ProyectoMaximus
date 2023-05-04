@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "cypress:open": "cypress open"
+    "test": "cypress open"
   },
   "author": "Agustin Togni",
   "license": "ISC",
