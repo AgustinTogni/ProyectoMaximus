@@ -205,9 +205,13 @@ describe('casos con ID =  HM', () => {
 
     // ID de caso: HM-021
     it('Apartado "Seguinos en Redes"', () => {
+        cy.get('.redes > :nth-child(1)').should('be.visible')
         cy.get('.redes > :nth-child(1)').click()
+        cy.get('.redes > :nth-child(2)').should('be.visible')
         cy.get('.redes > :nth-child(2)').click()
+        cy.get('.redes > :nth-child(3)').should('be.visible')
         cy.get('.redes > :nth-child(3)').click()
+        cy.get('.redes > :nth-child(4)').should('be.visible')
         cy.get('.redes > :nth-child(4)').click()
     })
 })
