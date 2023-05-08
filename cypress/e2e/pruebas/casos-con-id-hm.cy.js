@@ -164,8 +164,51 @@ describe('casos con ID =  HM', () => {
         cy.get('.col-md-9 > .row').should('exist')
     })
 
-    // // ID de caso: HM-018
-    // it('Apartado "Marcas"', () => {
+    // ID de caso: HM-018
+    it('Apartado "Marcas"', () => {
+        cy.get('.gb-brand-list > :nth-child(1) > a').click()
+        cy.get('strong').should('exist')
+        home.Inicio()
+        cy.get('.gb-brand-list > :nth-child(2) > a').click()
+        cy.contains('Genesis').should('exist')
+        home.Inicio()
+        cy.get('.gb-brand-list > :nth-child(3) > a').click()
+        cy.contains('Amd').should('exist')
+        home.Inicio()
+        cy.get('.asus').click()
+        cy.contains('Asus').should('exist')
+        home.Inicio()
+        cy.get('.gb-brand-list > :nth-child(5) > a').click()
+        cy.contains('Nvidia').should('exist')
+        home.Inicio()
+        cy.get('.gb-brand-list > :nth-child(6) > a').click()
+        cy.contains('Logitech').should('exist')
+        home.Inicio()
+        cy.get('.gb-brand-list > :nth-child(7) > a').click()
+        cy.contains('Gigabyte').should('exist')
+        home.Inicio()
+        cy.get('.redragon').click()
+        cy.contains('Redragon').should('exist')
+    })
 
-    // })
+    // ID de caso: HM-019
+    it('Boton Icono "Messenger"', () => {
+        cy.get('#messenger > img').should('be.visible')
+        cy.get('#messenger > img').click()
+    })
+
+    // ID de caso: HM-020
+    it('Boton Icono "Whatsapp"', () => {
+        cy.get('#whatsapp > img').should('be.visible')
+        cy.get('#messenger > img').click()
+    })
+
+    // ID de caso: HM-021
+    it('Apartado "Seguinos en Redes"', () => {
+        cy.get('.redes > :nth-child(1)').click()
+        cy.get('.redes > :nth-child(2)').click()
+        cy.get('.redes > :nth-child(3)').click()
+        cy.get('.redes > :nth-child(4)').click()
+    })
 })
+
