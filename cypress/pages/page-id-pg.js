@@ -1,4 +1,4 @@
-class PageIDLg {
+class PageIDPg {
 
     inicio(){
         cy.visit('https://www.maximus.com.ar/LOGIN/login/maximus.aspx')
@@ -6,4 +6,4 @@ class PageIDLg {
 
 }
 
-export default PageIDLg
+export default PageIDPg

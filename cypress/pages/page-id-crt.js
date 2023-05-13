@@ -1,7 +1,7 @@
 class PageIDCrt {
 
-    Inicio(){
-        cy.visit ('https://compragamer.com/?seccion=3')
+    inicio(){
+        cy.visit('https://www.maximus.com.ar/')
     }
 
 }

@@ -1,5 +1,5 @@
 {
-  "name": "cypress-1",
+  "name": "atomatizacionmaximus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "Agustin Togni",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.10.0"
+    "cypress": "^12.11.0",
+    "cypress-xpath": "^2.0.1"
   }
 }
