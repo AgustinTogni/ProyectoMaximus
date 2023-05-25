@@ -135,7 +135,7 @@ describe('casos con ID =  HM', () => {
     })
 
     // ID de caso: HM-014
-    it('Carrucel de imagenes', () => {
+    it('Carrusel de imagenes', () => {
         cy.get('#mainSlider > div > ul > li.flex-nav-next > a > img').click({force: true})
         cy.get('#mainSlider > div > ul > li.flex-nav-prev > a > img').click({force: true})
     })
@@ -198,7 +198,7 @@ describe('casos con ID =  HM', () => {
     })
 
     // ID de caso: HM-020
-    it('Boton Icono "Whatsapp"', () => {
+    it('Boton Icono "WhatsApp"', () => {
         cy.get('#whatsapp > img').should('be.visible')
         cy.get('#messenger > img').click()
     })

@@ -26,7 +26,7 @@ describe ('casos con ID =  LG', () => {
     })
 
     // ID de caso: LG-003
-    it('Link del texto "Resistrarme"', () => {
+    it('Link del texto "Registrarme"', () => {
         cy.get('#cajaRegistro > a').click()
         cy.get('.col-md-6').should('exist')
     })
