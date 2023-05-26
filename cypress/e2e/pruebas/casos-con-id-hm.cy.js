@@ -12,7 +12,7 @@ describe('casos con ID =  HM', () => {
     it('Boton "seguir mi pedido UPS"', () => {
         cy.get('.links > .ups').invoke('removeAttr','target').click()
         cy.origin('https://www.ups.com', () => {
-            cy.get('#ups-header_logo > img').should('exist')
+            cy.get('#ups-header_logo > img').should('be.visible')
         })
     })
 
@@ -20,26 +20,26 @@ describe('casos con ID =  HM', () => {
     it('Boton "seguir mi pedido OCA"', () => {
         cy.get('.oca').invoke('removeAttr','target').click()
         cy.origin('https://www.oca.com.ar', () => {
-            cy.get('.logo-oca').should('exist')
+            cy.get('.logo-oca').should('be.visible')
         })
     })
 
     // ID de caso: HM-003
     it('Boton "subir comprobante"', () => {
         cy.get('#abircomprobantenologueado').click()
-        cy.get('#modalcomprobantenologueado > .modal-dialog > .modal-content > .modal-header > .modal-title').should('exist')
+        cy.get('#modalcomprobantenologueado > .modal-dialog > .modal-content > .modal-header > .modal-title').should('be.visible')
     })
 
     // ID de caso: HM-004
     it('Boton "RMA - Garantia"', () => {
         cy.get('.rma > span').click()
-        cy.get('.titulo-envio').should('exist')
+        cy.get('.titulo-envio').should('be.visible')
     })
 
     // ID de caso: HM-005
     it('Boton "Ayuda"' , () => {
         cy.get('.ayuda > span').click()
-        cy.get('h1').should('exist')
+        cy.get('h1').should('be.visible')
     })
 
     // ID de caso: HM-006
@@ -53,7 +53,7 @@ describe('casos con ID =  HM', () => {
     it('Buscar un producto invalido', () => {
         cy.get('#buscadorDesktop').type('Chocolate')
         cy.get('.form-web-header > button').click()
-        cy.get('[style="margin-bottom: 5px;"]').should('exist')
+        cy.get('[style="margin-bottom: 5px;"]').should('be.visible')
     })
 
     // ID de caso: HM-008
@@ -61,30 +61,30 @@ describe('casos con ID =  HM', () => {
         cy.get('#buscadorDesktop').type('@#$#$!#')
         cy.log('Cypress da como valido el siguiente paso ya que no reconoce los caracteres ingresados en el campo seleccionado')
         cy.get('#buscadorDesktop').should('not.have.text', '@#$#$!#')
-        cy.contains('caracteres invalidos').should('exist')
+        cy.contains('caracteres invalidos').should('be.visible')
     })
 
     // ID de caso: HM-009
     it('Boton "Ingresar"', () => {
         cy.get('#cuentanologueada > .textosDerecha').click()
-        cy.get('.col-md-offset-4 > .tit-gral').should('exist')
+        cy.get('.col-md-offset-4 > .tit-gral').should('be.visible')
     })
 
     // ID de caso: HM-010
     it('Boton "Mi carrito"', () => {
         cy.get('.carrito > .textosDerecha').click()
-        cy.get('.su-pedido > h3').should('exist')
+        cy.get('.su-pedido > h3').should('be.visible')
     })
 
     // ID de caso: HM-011
     it('Busqueda por categoria', () => {
         home.ClickBotonHamburguesa()
         cy.get(':nth-child(1) > .apertura-cat-principal-static > a > span').click()
-        cy.get('.title-description').should('exist')
+        cy.get('.title-description').should('be.visible')
         home.Inicio()
         home.ClickBotonHamburguesa()
         cy.get(':nth-child(2) > .apertura-cat-principal-static > a > span').click()
-        cy.get('.title-description').should('exist')
+        cy.get('.title-description').should('be.visible')
         home.Inicio()
         home.ClickBotonHamburguesa()
         cy.get(':nth-child(4) > .apertura-cat-principal > a').click()
@@ -100,8 +100,8 @@ describe('casos con ID =  HM', () => {
         home.Inicio()
         home.ClickBotonHamburguesa()
         cy.get(':nth-child(7) > .apertura-cat-principal > a').click()
-        cy.get('.flex-componentes-perifericos > .columna-izquierda-side-secundario').should('exist')
-        cy.get('.flex-componentes-perifericos > .columna-derecha-side-secundario').should('exist')
+        cy.get('.flex-componentes-perifericos > .columna-izquierda-side-secundario').should('be.visible')
+        cy.get('.flex-componentes-perifericos > .columna-derecha-side-secundario').should('be.visible')
         home.Inicio()
         home.ClickBotonHamburguesa()
         cy.get(':nth-child(8) > .apertura-cat-principal > a').click()
@@ -123,15 +123,15 @@ describe('casos con ID =  HM', () => {
     // ID de caso: HM-012
     it('Boton "ARMA TU PC"', () => {
         cy.get('.nav-link > span').click()
-        cy.get('.title-description').should('exist')
+        cy.get('.title-description').should('be.visible')
     })
 
     // ID de caso: HM-013
     it('Alternar modo claro/oscuro', () => {
         cy.get('.slider-theme').click()
-        cy.get('.modo-oscuro').should('exist')
+        cy.get('.modo-oscuro').should('be.visible')
         cy.get('.slider-theme').click()
-        cy.get('.modo-claro').should('exist')
+        cy.get('.modo-claro').should('be.visible')
     })
 
     // ID de caso: HM-014
@@ -149,25 +149,25 @@ describe('casos con ID =  HM', () => {
     // ID de caso: HM-016
     it('Apartado "PCs Recomendadas"', () => {
         cy.get(':nth-child(1) > .boxpchome > .product > .image > a > picture.img-responsive > .img-responsive').click()
-        cy.get('.col-md-9 > .row').should('exist')
+        cy.get('.col-md-9 > .row').should('be.visible')
         home.Inicio()
         cy.get(':nth-child(2) > .boxpchome > .product > .image > a > picture.img-responsive > .img-responsive').click()
-        cy.get('.col-md-9 > .row').should('exist')
+        cy.get('.col-md-9 > .row').should('be.visible')
         home.Inicio()
         cy.get(':nth-child(3) > .boxpchome > .product > .image > a > picture.img-responsive > .img-responsive').click()
-        cy.get('.col-md-9 > .row').should('exist')
+        cy.get('.col-md-9 > .row').should('be.visible')
     })
 
     // ID de caso: HM-017
     it('Apartado "Productos Destacados"', () => {
         cy.get('.title-description > a').click()
-        cy.get('.col-md-9 > .row').should('exist')
+        cy.get('.col-md-9 > .row').should('be.visible')
     })
 
     // ID de caso: HM-018
     it('Apartado "Marcas"', () => {
         cy.get('.gb-brand-list > :nth-child(1) > a').click()
-        cy.get('strong').should('exist')
+        cy.get('strong').should('be.visible')
         home.Inicio()
         cy.get('.gb-brand-list > :nth-child(2) > a').click()
         cy.contains('Genesis').should('exist')

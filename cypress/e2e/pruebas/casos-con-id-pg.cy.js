@@ -23,7 +23,7 @@ describe('Casos con ID = PG', () => {
         cy.get('.input-group > .btn-light').click()
         cy.get('.checkout-envio > .justify-content-around > .columna-1 > .col-xs-12 > #acordion > .row').should('be.visible')
 
-        // Se procede al pago - Datos personales
+        // Se procede al pago - Datos personales.
         cy.get('#cart-buy-btn').click()
         cy.get('#provincia1').select(1)
         cy.get(':nth-child(1) > .row > :nth-child(2) > .form-control').type('3341')
@@ -37,7 +37,7 @@ describe('Casos con ID = PG', () => {
         cy.get(':nth-child(2) > .col-md-12 > .form-control').type('Monte Grande')
         cy.get('.gb-checkout-delivery-options > .btn').click()
 
-        // Datos de pago (simulado)
+        // Datos de pago (simulado).
         cy.contains('Numero de tarjeta').type('2233232399990000')
         cy.contains('Titular de tarjeta').type('Juan Manual Gonzales')
         cy.contains('Codigo de seguridad').type('XXX')

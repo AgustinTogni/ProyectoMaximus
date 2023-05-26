@@ -14,7 +14,7 @@ describe ('casos con ID =  LG', () => {
         cy.get('#usuario').type('Admin123@gmail.com')
         cy.get('#clave').type('Admin')
         cy.get('.col-md-offset-4 > .input-group.center-block > .btn').click()
-        cy.get('#home').should('exist')
+        cy.get('#home').should('be.visible')
     })
 
     // ID de caso: LG-002
@@ -28,7 +28,7 @@ describe ('casos con ID =  LG', () => {
     // ID de caso: LG-003
     it('Link del texto "Registrarme"', () => {
         cy.get('#cajaRegistro > a').click()
-        cy.get('.col-md-6').should('exist')
+        cy.get('.col-md-6').should('be.visible')
     })
 
     // ID de caso: LG-004
